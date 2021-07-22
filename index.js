@@ -81,6 +81,7 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
+    this.season = "spring";
   }
 
   /**
@@ -96,7 +97,16 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    // ✨ implement
+    if (this.season === "spring") {
+      this.season = "summer";
+    } else if (this.season === "summer") {
+      this.season = "fall";
+    } else if (this.season === "fall") {
+      this.season = "winter";
+    } else if (this.season === "winter") {
+      this.season = "spring";
+    }
+    return this.season;
   }
 }
 
